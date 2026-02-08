@@ -25,6 +25,8 @@ Abrir un terminal en la carpeta y ejecutar
 python3 microscopio.py
 ~~~
 
+Usar **ESC** para salir
+
 ![](captura_20260208_211035.png)
 
 * [Documentación](Microscopio_PRO_Documentacion.md)
