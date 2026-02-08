@@ -202,6 +202,8 @@ Sin garantías implícitas.
 
 ## 👤 Autor / Contexto
 
+(c) Jordi Orts 2026 
+Licencia MIT
 Desarrollado iterativamente para uso práctico con microscopio USB en Linux,
 priorizando **robustez**, **claridad** y **flujo de trabajo real**.
 
