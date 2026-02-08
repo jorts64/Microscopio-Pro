@@ -10,7 +10,7 @@ sudo apt install python3-opencv python3-numpy v4l-utils
 ~~~
 
 2) Bajar el script python a una carpeta
-3) Editar el principio del script para ajustar dispositivo de video */dev/videoX* y *resolución*
+3) Editar el principio del script para ajustar dispositivo de video */dev/videoX* y resolución
 ~~~
 # ================= CONFIG =================
 VIDEO_DEVICE = 2
