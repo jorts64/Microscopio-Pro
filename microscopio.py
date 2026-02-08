@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+
+# ===================================================
+# 
+#                 (c) Jordi Orts 2026
+# 
+#                     Licencia MIT
+#
+# ===================================================
+
 import cv2
 import math
 import time
