@@ -9,7 +9,7 @@ Aplicación de medición en tiempo real basada en **Python + OpenCV**, diseñada
 sudo apt install python3-opencv python3-numpy v4l-utils
 ~~~
 
-2) Bajar el script python a una carpeta
+2) Bajar el [Script Python3](microscopio.py) a una carpeta
 3) Editar el principio del script para ajustar dispositivo de video */dev/videoX* y resolución
 ~~~
 # ================= CONFIG =================
@@ -27,7 +27,7 @@ python3 microscopio.py
 
 Usar **ESC** para salir
 
+[Documentación y Manual del Usuario](Microscopio_PRO_Documentacion.md)
+
 ![](captura_20260208_211035.png)
 
-* [Documentación](Microscopio_PRO_Documentacion.md)
-* [Script Python3](microscopio.py)
