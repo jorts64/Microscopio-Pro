@@ -39,18 +39,18 @@ laboratory environments.
 
 ------------------------------------------------------------------------
 
-## 📦 Requirements
+## 📦 Dependencies (Debian)
 
 Microscopi requires:
 
--   Python 3
--   OpenCV built with FreeType support
--   Tkinter
--   V4L2 compatible camera
+- python3
+- python3-opencv (with FreeType support)
+- python3-tk
+- gettext
 
-On Debian / Ubuntu:
+Install with:
 
-    sudo apt install python3-opencv python3-opencv-contrib python3-tk
+sudo apt install python3 python3-opencv python3-tk gettext
 
 If OpenCV was built **without FreeType support**, the program will not
 start.
