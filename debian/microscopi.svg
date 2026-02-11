@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .bg { fill: #003366; }
+      .fg { fill: #ffffff; }
+      .stroke { stroke: #ffffff; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .mark { stroke: #ffffff; stroke-width: 6; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="120" class="bg"/>
+
+  <!-- Magnifying glass -->
+  <circle cx="110" cy="110" r="55" fill="none" class="stroke"/>
+  <line x1="145" y1="145" x2="190" y2="190" class="stroke"/>
+
+  <!-- Ruler inside magnifying glass -->
+  <rect x="70" y="105" width="80" height="20" class="fg" rx="4"/>
+  <line x1="80" y1="105" x2="80" y2="95" class="mark"/>
+  <line x1="95" y1="105" x2="95" y2="90" class="mark"/>
+  <line x1="110" y1="105" x2="110" y2="95" class="mark"/>
+  <line x1="125" y1="105" x2="125" y2="90" class="mark"/>
+  <line x1="140" y1="105" x2="140" y2="95" class="mark"/>
+</svg>

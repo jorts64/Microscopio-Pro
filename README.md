@@ -57,6 +57,20 @@ start.
 
 ------------------------------------------------------------------------
 
+
+## Installation
+
+### Debian / Ubuntu
+Download the .deb from Releases and install:
+
+sudo dpkg -i microscopi_0.9.0-1_amd64.deb
+sudo apt -f install
+
+### From source
+pip install .
+
+------------------------------------------------------------------------
+
 ## 🚀 Running
 
 Basic usage:
@@ -136,6 +150,18 @@ Current version: **0.9.0**
 ## 📜 License
 
 MIT License
+
+------------------------------------------------------------------------
+
+## Roadmap
+
+- [x] Debian package
+- [x] i18n
+- [x] CSV export
+- [ ] Geometry improvements
+- [ ] Measurement editing
+- [ ] Hardware profile presets
+- [ ] Debian official submission
 
 ------------------------------------------------------------------------
 

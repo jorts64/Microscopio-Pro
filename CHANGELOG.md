@@ -37,6 +37,8 @@ versioning principles.
 -   Version display in window title and status bar
 -   Proper video device error handling
 -   Internationalization framework (i18n)
+-   GTK desktop integration
+-   SVG icon
 
 ### Improved
 

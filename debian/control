@@ -2,7 +2,13 @@ Source: microscopi
 Section: science
 Priority: optional
 Maintainer: Jordi Orts <jorts64@users.noreply.github.com>
-Build-Depends: debhelper-compat (= 13), dh-python, python3-all
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ pybuild-plugin-pyproject,
+ python3-setuptools,
+ python3-wheel
 Standards-Version: 4.6.2
 Homepage: https://github.com/jorts64/microscopi
 Rules-Requires-Root: no

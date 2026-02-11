@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Microscopi
+Comment=Digital microscope measurement tool
+Comment[ca]=Eina de mesura per a microscopi digital
+Comment[es]=Herramienta de medición para microscopio digital
+Exec=microscopi
+Icon=microscopi
+Terminal=false
+Type=Application
+Categories=Graphics;Science;Education;
+Keywords=microscope;measurement;pcb;electronics;

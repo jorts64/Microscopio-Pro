@@ -1,3 +1,24 @@
 microscopi.egg-info/
-__pycache__/
 .venv/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.pybuild/
+
+# Debian build artifacts
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper
+debian/microscopi/
+*.buildinfo
+*.changes
+*.deb
+
+# gettext backups
+*.po~

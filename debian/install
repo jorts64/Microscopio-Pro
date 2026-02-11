@@ -1,1 +1,4 @@
 microscopi /usr/lib/python3/dist-packages/
+debian/microscopi.desktop usr/share/applications/
+debian/microscopi.svg usr/share/icons/hicolor/scalable/apps/
+
