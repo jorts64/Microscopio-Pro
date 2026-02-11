@@ -1,7 +1,14 @@
+# Microscopi
+
+![GitHub release](https://img.shields.io/github/v/release/jorts64/microscopi)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Debian](https://img.shields.io/badge/Debian-13%20Trixie-red)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
+
+
 ![](microscopi.png)
 
-
-# Microscopi
 
 **Microscopi** is an open-source digital microscope measurement tool for
 Linux.
