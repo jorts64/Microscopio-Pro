@@ -1,6 +1,6 @@
 [project]
 name = "microscopi"
-version = "0.9.0"
+version = "0.10.0"
 description = "Digital microscope measurement tool"
 authors = [{name = "Jordi Orts"}]
 license = {text = "MIT"}
