@@ -6,6 +6,15 @@ The format is inspired by Keep a Changelog and follows semantic
 versioning principles.
 
 ------------------------------------------------------------------------
+## \[0.11.0\] - 2026-02-12
+
+### Refactor improvement
+
+- Refactor: video encapsulated in VideoSource
+- Refactor: renderer module extracted
+- Refactor: preview module extracted
+- Refactor: clean main loop
+- UI: graphical error popups for camera issues
 
 ## \[0.9.0\] - 2026-02-11
 

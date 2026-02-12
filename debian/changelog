@@ -1,3 +1,13 @@
+microscopi (0.11.0-1) UNRELEASED; urgency=medium
+
+  * Development version.
+  * Refactor: video encapsulated in VideoSource.
+  * Refactor: renderer module extracted.
+  * Refactor: preview module extracted.
+  * Refactor: clean main loop.
+
+ -- Jordi Orts <jorts64@users.noreply.github.com>  Thu, 12 Feb 2026 16:36:38 +0100
+
 microscopi (0.10.0-1) unstable; urgency=medium
 
   * Development version.
