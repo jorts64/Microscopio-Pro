@@ -5,7 +5,7 @@ RIGHT_PANEL_W = 300
 BOTTOM_PANEL_H = 60
 MM_PER_INCH = 25.4
 
-VERSION = "0.11.1"
+VERSION = "0.12.0"
 
 COLOR_MAP = {
     "RED": (0, 0, 255),
@@ -24,3 +24,6 @@ BUTTONS = [
     "PNG", "(0,0)", "3D", "PCB",
     "QUIT",
 ]
+
+MEASURE_LIST_TOP = 30
+MEASURE_ROW_HEIGHT = 22

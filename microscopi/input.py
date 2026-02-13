@@ -1,5 +1,6 @@
 import cv2
 from .constants import LEFT_MENU_W, RIGHT_PANEL_W, COLOR_MAP
+from .constants import MEASURE_LIST_TOP, MEASURE_ROW_HEIGHT
 from .ui import hit_menu
 from .actions import (
     calibrate_with_value,
@@ -23,15 +24,30 @@ def mouse(event, x, y, flags, state):
 
     # --- CLICK EN PANEL DERECHO ---
     if state.last_frame is not None:
+
         panel_x_start = state.last_frame.shape[1] - RIGHT_PANEL_W
 
         if x >= panel_x_start:
-            rel_y = y - 30
-            idx = rel_y // 22
 
-            if 0 <= idx < len(state.measurements):
-                state.measurements[idx]["visible"] = \
-                    not state.measurements[idx]["visible"]
+            # La primera fila empieza realmente en 30 - 14
+            list_top = MEASURE_LIST_TOP - 14
+
+            rel_y = y - list_top
+
+            if rel_y >= 0:
+                idx = rel_y // MEASURE_ROW_HEIGHT
+            else:
+                idx = -1
+
+            # Solo mostramos las últimas 14
+            start = max(0, len(state.measurements) - 14)
+            visible_count = min(14, len(state.measurements))
+
+            if 0 <= idx < visible_count:
+                real_idx = start + idx
+                state.measurements[real_idx]["visible"] = \
+                    not state.measurements[real_idx]["visible"]
+
             return
 
     if cmd:
@@ -110,6 +126,10 @@ def _handle_menu_command(cmd, state):
     elif cmd in COLOR_MAP:
         state.measure_color = COLOR_MAP[cmd]
         state.measure_color_name = cmd
+
+    elif cmd in ("0.0", "0.00", "0.000"):
+        state.config.decimals = len(cmd) - 2
+        state.status_message = _("Precision:") + " " + cmd
 
     elif cmd == "GRY":
         state.gray = not state.gray

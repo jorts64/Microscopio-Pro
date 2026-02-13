@@ -198,7 +198,7 @@ This ensures geometrical consistency and future extensibility.
 
 ## 📌 Version
 
-Current version: **0.11.1**
+Current version: **0.12.0**
 
 ---
 

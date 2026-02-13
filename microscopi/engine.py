@@ -130,5 +130,31 @@ def handle_key(state, key):
         undo_measure(state)
         return True
 
+    if key == ord('m'):
+        from .editor import open_measure_editor
+        open_measure_editor(state)
+        return True
+
+    if key == ord('b'):
+        if len(state.points) == 2:
+            from tkinter import simpledialog, Tk
+            root = Tk()
+            root.withdraw()
+            value = simpledialog.askstring(
+                _("Calibration"),
+                _("Enter real distance")
+            )
+            root.destroy()
+
+            if value:
+                try:
+                    calibrate_with_value(state, float(value))
+                except:
+                    state.status_message = _("Invalid number")
+        else:
+            state.status_message = _("Select two points first")
+
+        return True
+
 
     return False

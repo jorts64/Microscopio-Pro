@@ -1,12 +1,23 @@
-microscopi (0.11.1-1) UNRELEASED; urgency=medium
+microscopi (0.12.0-1) unstable; urgency=medium
 
+  * Refactored mouse handling into dedicated input module.
+  * Added full JSON-based measure editor (key M) with validation.
+  * Added keyboard shortcut for calibration (key B).
+  * Fixed color selection regression after input refactor.
+  * Restored precision (decimal) button handling.
+  * Fixed origin drawing transformation when rotating.
+  * Corrected right panel checkbox offset and indexing.
+  * Improved graphical cursor visibility (dual contrast crosshair).
+  * Improved text editor visibility under dark desktop themes.
+  * Internal cleanup and stability improvements.
   * Fix: correct rotation geometry (base/visual transform)
   * Fix: preview alignment under rotation
   * Fix: gray mode applies only to image
   * UX: keyboard shortcuts (D,C,S,X,R,G,Z)
   * Save device and resolution options in .config file
 
- -- Jordi Orts <jorts64@users.noreply.github.com>  Thu, 12 Feb 2026 23:37:27 +0100
+ -- Jordi Orts <jorts64@users.noreply.github.com>  Fri, 14 Feb 2026 12:00:00 +0000
+
 
 microscopi (0.11.0-1) unstable; urgency=medium
 

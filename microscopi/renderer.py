@@ -57,10 +57,24 @@ def _draw_saved_measures(frame, state):
 
 
 def _draw_origin(frame, state):
-    if state.origin:
-        ox, oy = state.origin
-        cv2.line(frame, (ox - 8, oy), (ox + 8, oy), (0, 0, 255), 2)
-        cv2.line(frame, (ox, oy - 8), (ox, oy + 8), (0, 0, 255), 2)
+
+    if not state.origin:
+        return
+
+    ox, oy = state.origin
+
+    # Convertir base → visual según rotación
+    ox, oy = to_visual_coords(
+        ox, oy,
+        state.base_width,
+        state.base_height,
+        state.rotation
+    )
+
+    size = 8
+
+    cv2.line(frame, (ox - size, oy), (ox + size, oy), (0, 0, 255), 2)
+    cv2.line(frame, (ox, oy - size), (ox, oy + size), (0, 0, 255), 2)
 
 
 def _apply_gray(frame, state):
@@ -84,13 +98,21 @@ def _build_canvas(frame, state):
 
     return canvas
 
-
 def _draw_cursor(canvas, state):
-    if state.cursor_pos:
-        cx, cy = state.cursor_pos
-        size = 10
-        cv2.line(canvas, (cx - size, cy), (cx + size, cy), (200, 200, 200), 1)
-        cv2.line(canvas, (cx, cy - size), (cx, cy + size), (200, 200, 200), 1)
+
+    if not state.cursor_pos:
+        return
+
+    cx, cy = state.cursor_pos
+    size = 10
+
+    # Línea base negra (más gruesa)
+    cv2.line(canvas, (cx - size, cy), (cx + size, cy), (0, 0, 0), 3)
+    cv2.line(canvas, (cx, cy - size), (cx, cy + size), (0, 0, 0), 3)
+
+    # Línea blanca encima (más fina)
+    cv2.line(canvas, (cx - size, cy), (cx + size, cy), (255, 255, 255), 1)
+    cv2.line(canvas, (cx, cy - size), (cx, cy + size), (255, 255, 255), 1)
 
 def _transform_point(x, y, width, height, rotation):
 
@@ -115,6 +137,8 @@ def render(frame, state):
     frame = _apply_gray(frame, state)
 
     _draw_saved_measures(frame, state)
+
+    _draw_origin(frame, state) 
 
     draw_preview(frame, state)
 
