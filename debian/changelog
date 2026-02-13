@@ -16,7 +16,7 @@ microscopi (0.12.0-1) unstable; urgency=medium
   * UX: keyboard shortcuts (D,C,S,X,R,G,Z)
   * Save device and resolution options in .config file
 
- -- Jordi Orts <jorts64@users.noreply.github.com>  Fri, 14 Feb 2026 12:00:00 +0000
+ -- Jordi Orts <jorts64@users.noreply.github.com>  Fri, 13 Feb 2026 09:40:00 +0100
 
 
 microscopi (0.11.0-1) unstable; urgency=medium
